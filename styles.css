@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #fff8e1;
+  background: #1a1a1a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, .20), transparent 36rem),
+    linear-gradient(135deg, #1a1a1a 0%, #261817 46%, #3e2723 100%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.glass {
+  border: 1px solid rgba(255, 248, 225, .16);
+  background: rgba(255, 248, 225, .08);
+  backdrop-filter: blur(18px);
+}
+
+.gold-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  border-radius: 999px;
+  border: 0;
+  background: linear-gradient(135deg, #d4af37, #ff9800);
+  color: #1a1a1a;
+  font-weight: 800;
+  box-shadow: 0 16px 34px rgba(212, 175, 55, .28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gold-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px rgba(212, 175, 55, .38);
+}
+
+.section {
+  padding: 5rem 1rem;
+}
+
+.section-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid rgba(255, 248, 225, .18);
+  border-radius: 1rem;
+  background: rgba(26, 26, 26, .55);
+  color: #fff8e1;
+  padding: .9rem 1rem;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, .15);
+}
+
+.hero-bg {
+  background-image:
+    linear-gradient(90deg, rgba(26,26,26,.90), rgba(26,26,26,.42), rgba(26,26,26,.78)),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85");
+  background-position: center;
+  background-size: cover;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
