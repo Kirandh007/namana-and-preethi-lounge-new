@@ -6,6 +6,42 @@ const images = {
   drinks: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80"
 };
 
+const imageForItem = {
+  Idli: "https://source.unsplash.com/900x700/?idli,south-indian-breakfast",
+  Vada: "https://source.unsplash.com/900x700/?medu-vada,south-indian-food",
+  "Idli Vada": "https://source.unsplash.com/900x700/?idli-vada,sambar",
+  "Masala Dosa": "https://source.unsplash.com/900x700/?masala-dosa",
+  "Plain Dosa": "https://source.unsplash.com/900x700/?plain-dosa",
+  "Set Dosa": "https://source.unsplash.com/900x700/?set-dosa",
+  "Onion Dosa": "https://source.unsplash.com/900x700/?onion-dosa",
+  "Rava Dosa": "https://source.unsplash.com/900x700/?rava-dosa",
+  Poori: "https://source.unsplash.com/900x700/?poori,indian-breakfast",
+  Pongal: "https://source.unsplash.com/900x700/?ven-pongal,south-indian-food",
+  Upma: "https://source.unsplash.com/900x700/?upma,south-indian-breakfast",
+  "Bisi Bele Bath": "https://source.unsplash.com/900x700/?bisi-bele-bath,rice",
+  "Lemon Rice": "https://source.unsplash.com/900x700/?lemon-rice,indian-food",
+  "Curd Rice": "https://source.unsplash.com/900x700/?curd-rice,indian-food",
+  "South Indian Meals": "https://source.unsplash.com/900x700/?south-indian-thali,meals",
+  Roti: "https://source.unsplash.com/900x700/?roti,indian-bread",
+  "Butter Roti": "https://source.unsplash.com/900x700/?butter-roti,indian-bread",
+  "Butter Naan": "https://source.unsplash.com/900x700/?butter-naan",
+  "Paneer Butter Masala": "https://source.unsplash.com/900x700/?paneer-butter-masala",
+  "Dal Fry": "https://source.unsplash.com/900x700/?dal-fry,indian-curry",
+  "Dal Tadka": "https://source.unsplash.com/900x700/?dal-tadka",
+  "Chana Masala": "https://source.unsplash.com/900x700/?chana-masala",
+  "Veg Kolhapuri": "https://source.unsplash.com/900x700/?veg-kolhapuri,indian-curry",
+  "Jeera Rice": "https://source.unsplash.com/900x700/?jeera-rice",
+  "Veg Biryani": "https://source.unsplash.com/900x700/?veg-biryani",
+  "Gobi Manchurian": "https://source.unsplash.com/900x700/?gobi-manchurian",
+  "North Indian Thali": "https://source.unsplash.com/900x700/?north-indian-thali",
+  Tea: "https://source.unsplash.com/900x700/?indian-tea,chai",
+  Coffee: "https://source.unsplash.com/900x700/?filter-coffee",
+  "Lime Juice": "https://source.unsplash.com/900x700/?lime-juice",
+  "Badam Milk": "https://source.unsplash.com/900x700/?badam-milk,almond-milk",
+  Lassi: "https://source.unsplash.com/900x700/?lassi,indian-drink",
+  "Soft Drinks": "https://source.unsplash.com/900x700/?soft-drink"
+};
+
 export const menuItems = [
   ["Idli", "South Indian", 40], ["Vada", "South Indian", 35], ["Idli Vada", "South Indian", 60],
   ["Masala Dosa", "South Indian", 80], ["Plain Dosa", "South Indian", 60], ["Set Dosa", "South Indian", 70],
@@ -24,7 +60,7 @@ export const menuItems = [
   category,
   price,
   rating: Number((4.6 + (index % 4) * 0.1).toFixed(1)),
-  image: category === "South Indian" ? images.south : category === "North Indian" ? images.north : images.drinks,
+  image: imageForItem[name] || (category === "South Indian" ? images.south : category === "North Indian" ? images.north : images.drinks),
   description: "Freshly prepared with premium ingredients, signature spice balance, and lounge-style plating."
 }));
 
